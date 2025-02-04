@@ -1,0 +1,89 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    #calc {
+        border-left: red solid;
+        border-top: red solid;
+        border-bottom: blue solid;
+        border-right: blue solid;
+        padding-right: 0 ;
+        width: auto;
+        .result-container {
+            height: 2rem;
+            background-color: olive;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            width: auto;
+            padding: 1rem;
+            #result {   
+                height: 1rem;
+                background-color: green;
+                width: 40%;
+                height: 100%;
+                display: flex; 
+                align-items: center;
+                justify-content: center;
+            }
+        }
+
+        .container {
+            display: flex;
+            #numbers {
+                background-color: #906F45;
+                gap: 2rem;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                .line {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 2rem;
+                    width: 100%;
+                    padding: 0.5rem;
+                    input {
+                        background-color: aqua;
+                        cursor: pointer;
+                        width: 3rem;
+                        height: 2rem;
+                        border-radius: 12px;
+                        border: none;
+                    }
+                }
+            }
+
+            #inputs {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 2rem;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: #C1BAA7;
+                div {
+                    display: flex;
+                    gap: 2rem;
+                    width: 100%;
+                    padding: 0.5rem;
+                    input {
+                        background-color: aqua;
+                        cursor: pointer;
+                        width: 50%;
+                        height: 2rem;
+                        border-radius: 12px;
+                        border: none;
+                    }
+                    .egal {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
