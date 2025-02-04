@@ -1,27 +1,29 @@
 let result = 0;
 let temp ;
+let temp2 ; 
 let firstOp = true
 let selectedOperator = "+" 
 function calculate (currentOp) {
-    temp = parseFloat(display.textContent)
     switch (currentOp) {
         case "+":
+            console.log(`result: ${result}\n temp :${temp}`);
             result += temp ;
             break;
         case "-": 
+            console.log(`result: ${result}\n temp :${temp}`);
             result -= temp ;
             break; 
         case "*": 
+            console.log(`result: ${result}\n temp :${temp}`);
             result *= temp ;
             break; 
         case "/":
+            console.log(`result: ${result}\n temp :${temp}`);
             result /= temp ;
             break;
         case "=": 
-        setTimeout(function(){
             display.textContent = result;
-
-        }, 100)
+            console.log(`result: ${result}\n temp :${temp}`);
         default:
             break;
         
@@ -49,7 +51,7 @@ const inputs = document.querySelector("#inputs")
 inputs.addEventListener("mousedown", function (e) {
     
     if(firstOp) {
-        calculate(selectedOperator) ; resetDisplay() ;
+        result += parseFloat(display.textContent); resetDisplay()
         firstOp = false ; 
         selectedOperator = "+" ;
     }
@@ -57,7 +59,7 @@ inputs.addEventListener("mousedown", function (e) {
         selectedOperator = e.target.value
         calculate(selectedOperator) ; resetDisplay() ;
         console.log(result)
-        if(result == NaN) {
+        if(isNaN(result)) {
             display.textContent = "Input ERROR"
         }
     }
